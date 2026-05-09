@@ -10,8 +10,6 @@
     --color-lime-400: oklch(84.1% 0.238 128.85);
     --color-black: #000;
     --spacing: 0.25rem;
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
@@ -174,6 +172,9 @@
   .m-5 {
     margin: calc(var(--spacing) * 5);
   }
+  .m-10 {
+    margin: calc(var(--spacing) * 10);
+  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
@@ -198,11 +199,17 @@
   .table {
     display: table;
   }
+  .w-16 {
+    width: calc(var(--spacing) * 16);
+  }
   .w-28 {
     width: calc(var(--spacing) * 28);
   }
   .w-56 {
     width: calc(var(--spacing) * 56);
+  }
+  .w-80 {
+    width: calc(var(--spacing) * 80);
   }
   .w-200 {
     width: calc(var(--spacing) * 200);
@@ -228,11 +235,21 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
   .space-y-3 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
       margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
       margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-5 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .rounded {
@@ -252,6 +269,9 @@
   .border-\[\#262626\] {
     border-color: #262626;
   }
+  .border-black {
+    border-color: var(--color-black);
+  }
   .bg-\[\#262626\] {
     background-color: #262626;
   }
@@ -264,6 +284,9 @@
   .bg-lime-400 {
     background-color: var(--color-lime-400);
   }
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
+  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -275,10 +298,6 @@
   }
   .text-center {
     text-align: center;
-  }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
   .text-5xl {
     font-size: var(--text-5xl);
@@ -310,7 +329,6 @@
 body {
   background-color: #262626;
   color: white;
-  background-image: url(../img/b.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
